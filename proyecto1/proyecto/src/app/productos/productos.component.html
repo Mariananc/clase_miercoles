@@ -1,0 +1,19 @@
+<h1 style="text-align:center">{{titulo}}</h1>
+
+
+
+<div class="contenedor-productos">
+    <div *ngFor="let item of productos" class="ListadoProductos">
+        <mat-card class="producto">
+        <div class="cont-imagen">
+            <img mat-card-image class="imagen-producto" src="assets/images/{{item.image}}.svg" alt="{{item.nombre}}">
+        </div>
+        <div>
+            <mat-card-title class="nombre-producto">{{item.nombre}}</mat-card-title>   
+            <mat-card-subtitle class="textoUno">{{item.valor | currency}}</mat-card-subtitle>
+            <mat-card-content>prenda disponible</mat-card-content>
+            <a href="{{item.href}}"class="boton-producto">Ver producto</a>
+        </div>
+        </mat-card>
+    </div>
+</div>
